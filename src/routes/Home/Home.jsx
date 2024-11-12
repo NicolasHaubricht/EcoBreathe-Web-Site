@@ -1,10 +1,16 @@
 import React from 'react'
+import Button from '../../components/Button/Button'
 
 const Home = () => {
     return (
-        <section className='h-dvh w-full flex items-center justify-center bg-gray-950'>
-            <div className='w-[400px] bg-gray-900 h-[400px] border-4 flex items-center justify-center'>
-                <h1>Hello, World!</h1>
+        <section className='h-dvh w-full flex flex-col items-center justify-center bg-off-white -z-10'>
+            <div className='flex flex-col p-7'>
+                <h1 className='uppercase font-bold text-5xl sm:text-5xl  md:text-7xl text-center md:text-start text-green-1'>Wellcome</h1>
+                <h2 className='uppercase font-bold text-3xl sm:text-3xl md:text-5xl text-center md:text-start text-green-2'> To my Project <strong className='font-bold text-green-2'>Ecobreathe</strong></h2>
+                <div className='flex flex-wrap gap-5 justify-around mt-5'>
+                    <Button>See My LinkedIn</Button>
+                    <Button>See My LinkedIn</Button>
+                </div>
             </div>
         </section>
     )

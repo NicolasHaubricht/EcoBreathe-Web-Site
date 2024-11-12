@@ -5,6 +5,9 @@ import App from './App.jsx'
 import Error from './routes/Error/Error.jsx'
 import Home from './routes/Home/Home.jsx'
 import './index.css'
+import Dashboard from './routes/Dashboard/Dashboard.jsx'
+import About from './routes/About/About.jsx'
+import Contact from './routes/Contact/Contact.jsx'
 
 const router = createBrowserRouter ([
   {
@@ -16,6 +19,18 @@ const router = createBrowserRouter ([
       {
         path: '/',
         element: <Home/>
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard/>
+      },
+      {
+        path: '/about',
+        element: <About/>
+      },
+      {
+        path: '/contact',
+        element: <Contact/>
       }
     ]
   },
