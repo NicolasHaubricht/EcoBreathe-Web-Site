@@ -8,8 +8,7 @@ const Home = (props) => {
                 <h1 className='uppercase font-bold text-5xl sm:text-5xl  md:text-7xl text-center md:text-start text-green-1'>Wellcome</h1>
                 <h2 className='uppercase font-bold text-3xl sm:text-3xl md:text-5xl text-center md:text-start text-green-2'> To my Project <strong className='font-bold text-green-2'>Ecobreathe</strong></h2>
                 <div className='flex flex-wrap gap-5 justify-around mt-10'>
-                    <Button>{props = "Learn More"}</Button>
-                    <Button>See My LinkedIn</Button>
+                    <Button text_btn={'See More'}/>
                 </div>
             </div>
         </section>

@@ -2,60 +2,73 @@ import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 // Graphic Temperature
-const TemperatureChart = ({ data }) => (
-    <ResponsiveContainer width="100%" height={400}>
-        <LineChart width={1200} height={600} data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis domain={[20, 40]} />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="temperature" stroke="#214001" name="Temperatura (°C)" />
-        </LineChart>
-    </ResponsiveContainer>
-);
+const TemperatureChart = ({ data }) => {
+    const displayedData = data.slice(-10); // Last 10 data points
+    return (
+        <ResponsiveContainer width="100%" height={400}>
+            <LineChart data={displayedData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis domain={[20, 40]} />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="temperature" stroke="#214001" name="Temperatura (°C)" />
+            </LineChart>
+        </ResponsiveContainer>
+    );
+};
 
 // Graphic Humidity
-const HumidityChart = ({ data }) => (
-    <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis domain={[0, 100]} />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="humidity" stroke="#214001" name="Umidade (%)" />
-        </LineChart>
-    </ResponsiveContainer>
-);
+const HumidityChart = ({ data }) => {
+    const displayedData = data.slice(-10); // Last 10 data points
+    return (
+        <ResponsiveContainer width="100%" height={400}>
+            <LineChart data={displayedData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis domain={[0, 100]} />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="humidity" stroke="#214001" name="Umidade (%)" />
+            </LineChart>
+        </ResponsiveContainer>
+    );
+}
 
 // Graphic PM 2.5
-const Pm25Chart = ({ data }) => (
-    <ResponsiveContainer width="100%" height={400}>
-        <LineChart width={1200} height={600} data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis domain={[0, 1]} />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="pm2.5" stroke="#214001" name="Particles PM 2.5 (n)" />
-        </LineChart>
-    </ResponsiveContainer>
-);
+const Pm25Chart = ({ data }) => {
+    const displayedData = data.slice(-10); // Last 10 data points
+    return (
+        <ResponsiveContainer width="100%" height={400}>
+            <LineChart data={displayedData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" />
+                <YAxis domain={[0, 1]} />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="pm2.5" stroke="#214001" name="Particles PM 2.5 (n)" />
+            </LineChart>
+        </ResponsiveContainer>
+    );
+}
 
 // Graphic PM 10
-const Pm10Chart = ({ data }) => (
-    <ResponsiveContainer width="100%" height={400}>
-        <LineChart width={1200} height={600} data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="date" />
-            <YAxis domain={[0, 0.1]} />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="pm10" stroke="#214001" name="Particles PM 10 (n)" />
-        </LineChart>
-    </ResponsiveContainer>
-);
+const Pm10Chart = ({ data }) => {
+    const displayedData = data.slice(-10); // Last 10 data points 
+    return (
+        <ResponsiveContainer width="100%" height={400}>
+            <LineChart data={displayedData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date"/>
+                <YAxis domain={[0, 0.1]} />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="pm10" stroke="#214001" name="Particles PM 10 (n)" />
+            </LineChart>
+        </ResponsiveContainer>
+    );
+
+}
 
 
 // Render Graphics
@@ -70,6 +83,11 @@ const Dashboard = () => {
         { value: 'pm10', label: 'Particles PM 10', component: Pm10Chart},
     ];
 
+    
+    const handleChartChange = (e) => {
+        setSelectedChart(e.target.value);
+    };
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -82,10 +100,6 @@ const Dashboard = () => {
         };
         fetchData();
     }, []);
-
-    const handleChartChange = (e) => {
-        setSelectedChart(e.target.value);
-    };
 
     return (
         <section className='flex flex-col h-dvh items-center justify-center gap-5 bg-off-white'>
@@ -112,7 +126,9 @@ const Dashboard = () => {
                         const ChartComponent = chart.component;
                         return <ChartComponent key={chart.value} data={data} />;
                     }
-                    return null;
+                    else{
+                        return null;
+                    }                         
                 })}
             </div>
         </section>
