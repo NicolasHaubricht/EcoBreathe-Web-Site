@@ -3,7 +3,7 @@ import React from 'react'
 const Nav = () => {
     return (
         <>
-            <nav className='fixed w-full h-[50px] bg-transparent'>
+            <nav className='absolute w-full h-[50px] bg-off-white'>
                 <ul className='w-full h-full flex justify-around items-center'>
                     {/* Name Project */}
                     <li>

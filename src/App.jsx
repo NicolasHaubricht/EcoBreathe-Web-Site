@@ -10,12 +10,8 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // Exibe o loading ao iniciar a troca de rota
     setIsLoading(true);
-
-    // Desativa o loading após a animação
-    const timer = setTimeout(() => setIsLoading(false), 500);
-
+    const timer = setTimeout(() => setIsLoading(false), 800);
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
@@ -23,7 +19,7 @@ function App() {
     <>
       <Nav />
       <ProSideBar />
-      <Loading isLoading={isLoading} /> {/* Exibe o componente de Loading */}
+      <Loading isLoading={isLoading} /> 
       <Outlet />
       <Footer />
     </>
