@@ -5,9 +5,11 @@ import ButtonLinkedIn from '../../components/ButtonLinkedIn/ButtonLinkedIn'
 const Contact = () => {
     return (
         <section className='bg-off-white min-h-dvh z-50 flex w-full items-center justify-center'>
-            <ButtonGitHub></ButtonGitHub>
-            <ButtonLinkedIn></ButtonLinkedIn>
-        </section>  
+            <div className='flex flex-wrap gap-4'>
+                <ButtonGitHub></ButtonGitHub>
+                <ButtonLinkedIn></ButtonLinkedIn>
+            </div>
+        </section>
     )
 }
 

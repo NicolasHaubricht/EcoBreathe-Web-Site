@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SimulacaoWokwi from '../../assets/wokwi.png'
 import Dash from '../../assets/dash.png'
-const About = () => {
+import ButtonLinkedIn from '../../components/ButtonLinkedIn/ButtonLinkedIn'
 
-    const link = 'https://www.eea.europa.eu/pt/help/perguntas-frequentes/o-que-sao-particulas-em'
+const About = () => {
     return (
+        // Este projeto tem como objetivo o monitoramento da qualidade do ar em grandes centros urbanos.
         <main className='min-h-dvh flex w-full justify-center bg-off-white z-50'>
             <section className='flex flex-col p-8 w-11/12 lg:w-10/12 mt-10 gap-9'>
                 <div className='w-full flex flex-col items-center gap-2'>
@@ -31,15 +32,18 @@ const About = () => {
                     <div className='flex flex-col items-center gap-3'>
                         <h2 className='text-xl font-semibold'>Projeto no Wokwi</h2>
                         <img className='md:h-64 w-auto rounded-2xl' src={SimulacaoWokwi} alt="Simulação Wokwi" />
+                        <ButtonLinkedIn></ButtonLinkedIn>
                     </div>
                     <div className='flex flex-col items-center gap-3'>
                         <h2 className='text-xl font-semibold'>Dashboard</h2>
                         <img className='md:h-64 w-auto rounded-2xl' src={Dash} alt="Simulação Wokwi" />
+                        <ButtonLinkedIn></ButtonLinkedIn>
                     </div>
                 </div>
 
                 <div >
                     <h2>Consumo dos dados</h2>
+                    
                     <p></p>
                 </div>
 
