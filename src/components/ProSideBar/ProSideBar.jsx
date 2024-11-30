@@ -43,7 +43,7 @@ const ProSideBar = () => {
             onSetOpen={handleSidebarToggle}
         >
             <div
-                className="p-2 w-11 h-11 md:fixed md:h-dvh flex items-center justify-center bg-green-2 max-md:rounded-r-md z-0 text-white"
+                className="p-2 w-11 h-11 md:fixed md:h-dvh flex items-center justify-center bg-green-2 max-md:rounded-r-md z-0 text-white hover:w-16 transition-all ease-in-out"
             >
                 <button onClick={() => handleSidebarToggle(!sidebarOpen)} className='md:hidden'>
                     <span className="material-symbols-outlined">
