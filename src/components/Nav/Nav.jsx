@@ -11,7 +11,7 @@ const Nav = () => {
                     </li>
 
                     <li className='max-md:hidden'>
-                        <p className='font-thin uppercase'>For a better world!</p>
+                        <p className='font-thin uppercase'>Por um mundo melhor!</p>
                     </li>
                 </ul>
             </nav>

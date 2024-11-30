@@ -1,7 +1,7 @@
 import React from 'react';
-import './button.css'
+import './ButtonHome.css'
 
-const Button = ({text_btn}) => {
+const ButtonHome = ({text_btn}) => {
     return (
         <button className="animated-button">
             <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -20,4 +20,4 @@ const Button = ({text_btn}) => {
     );
 };
 
-export default Button;
+export default ButtonHome;
