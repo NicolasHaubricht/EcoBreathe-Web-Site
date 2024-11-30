@@ -13,7 +13,7 @@ const ProSideBar = () => {
     return (
         <Sidebar
             sidebar={
-                <div className="bg-green-2 text-white w-64 h-full p-4 z-50">
+                <div className="bg-green-2 text-white w-64 h-full p-4">
                     <h2 className="text-xl uppercase font-semibold mb-6">Ecobreathe</h2>
                     <ul>
                         <Link to='/'>
@@ -43,7 +43,7 @@ const ProSideBar = () => {
             onSetOpen={handleSidebarToggle}
         >
             <div
-                className="p-2 w-11 h-11 md:h-dvh flex items-center justify-center bg-green-2 max-md:rounded-r-md  text-white"
+                className="p-2 w-11 h-11 absolute md:h-dvh flex items-center justify-center bg-green-2 max-md:rounded-r-md z-0 text-white"
             >
                 <button onClick={() => handleSidebarToggle(!sidebarOpen)} className='md:hidden'>
                     <span className="material-symbols-outlined">
