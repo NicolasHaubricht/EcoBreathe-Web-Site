@@ -30,17 +30,15 @@ const About = () => {
                     {/* Wokwi */}
                     <div className='flex flex-col items-center gap-3'>
                         <h2 className='text-xl font-semibold'>Projeto no Wokwi</h2>
-                        <img className='md:h-64 w-auto rounded-2xl' src={SimulacaoWokwi} alt="Simulação Wokwi" />
-                        <Link to={link_wokwi_simulacao} target='_blank'>
-                            <ButtonHome text_btn={'Veja a Simulação'}/>
+                        <Link to={link_wokwi_simulacao} target='_blank' className='z-0 cursor-pointer'>
+                            <img className='md:h-64 w-auto rounded-2xl transition-all ease-in-out hover:shadow-2xl' src={SimulacaoWokwi} alt="Simulação Wokwi" />
                         </Link>
                     </div>
                     {/* Dashboard */}
                     <div className='flex flex-col items-center gap-3'>
                         <h2 className='text-xl font-semibold'>Dashboard</h2>
-                        <img className='md:h-64 w-auto rounded-2xl' src={Dashboard} alt="Simulação Wokwi" />
-                        <Link to={link_github_dash} target='_blank'>
-                            <ButtonHome text_btn={'Veja o Repositório'}/>
+                        <Link to={link_github_dash} target='_blank' className='z-0 cursor-pointer'>
+                            <img className='md:h-64 w-auto rounded-2xl transition-all ease-in-out hover:shadow-2xl' src={Dashboard} alt="Simulação Wokwi" />
                         </Link>
                     </div>
                 </div>
@@ -50,28 +48,26 @@ const About = () => {
                     {/* IoT */}
                     <div className='flex flex-col items-center gap-3'>
                         <h2 className='text-xl font-semibold'>Dispositivo IoT</h2>
-                        <img className='md:h-64 w-auto rounded-2xl' src={IoT} alt="Simulação Wokwi" />
-                        <Link to={link_github_dash} target='_blank'>
-                            <ButtonHome text_btn={'Veja o Repositório'}/>
+                        <Link to={link_github_dash} target='_blank' className='z-0 cursor-pointer'>
+                            <img className='md:h-64 w-auto rounded-2xl transition-all ease-in-out hover:shadow-2xl' src={IoT} alt="Simulação Wokwi" />
                         </Link>
                     </div>
                     {/* Web Site */}
                     <div className='flex flex-col items-center gap-3'>
                         <h2 className='text-xl font-semibold'>Web Site</h2>
-                        <img className='md:h-64 w-auto rounded-2xl' src={WebSite} alt="Simulação Wokwi" />
-                        <Link to={link_github_web_site} target='_blank'>
-                            <ButtonHome text_btn={'Veja o Repositório'}/>
+                        <Link to={link_github_web_site} target='_blank' className='z-0 cursor-pointer'>
+                            <img className='md:h-64 w-auto rounded-2xl transition-all ease-in-out hover:shadow-2xl' src={WebSite} alt="Simulação Wokwi" />
                         </Link>
                     </div>
                 </div>
 
                 {/* Informações Adicionais */}
                 <div className='flex flex-col gap-3'>
-                    <h3>Informações adicionais!</h3>
+                    <h3 className='text-xl'>Informações adicionais!</h3>
                     
-                    <p> <strong>*</strong> Para que o projeto esteja disponível de forma prática, os dados coletados não podem depender exclusivamente da Máquina Virtual, que precisaria estar constantemente ligada, o que é inviável. Por isso, as informações são armazenadas em um arquivo JSON, permitindo acesso mais fácil e eficiente aos dados sem necessidade de uma infraestrutura ativa o tempo todo.</p>
+                    <p className='text-justify'> <strong>*</strong> Para que o projeto esteja disponível de forma prática, os dados coletados não podem depender exclusivamente da Máquina Virtual, que precisaria estar constantemente ligada, o que é inviável. Por isso, as informações são armazenadas em um arquivo JSON, permitindo acesso mais fácil e eficiente aos dados sem necessidade de uma infraestrutura ativa o tempo todo.</p>
 
-                    <p> <strong>*</strong> O DHT22 é um sensor capaz de medir temperatura e umidade, mas não possui a funcionalidade de coletar dados sobre partículas como PM10 e PM2.5. No caso do projeto, como o simulador utilizado não suporta dispositivos específicos para medir tais partículas, esses valores foram simulados para complementar os dados ambientais coletados, oferecendo uma visão mais abrangente sobre a qualidade do ar.</p>
+                    <p className='text-justify'> <strong>*</strong> O DHT22 é um sensor capaz de medir temperatura e umidade, mas não possui a funcionalidade de coletar dados sobre partículas como PM10 e PM2.5. No caso do projeto, como o simulador utilizado não suporta dispositivos específicos para medir tais partículas, esses valores foram simulados para complementar os dados ambientais coletados, oferecendo uma visão mais abrangente sobre a qualidade do ar.</p>
                 </div>
             </section>
         </main>
