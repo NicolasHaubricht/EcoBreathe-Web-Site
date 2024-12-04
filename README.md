@@ -35,8 +35,8 @@ Abaixo estão as principais dependências utilizadas neste projeto:
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/ecobreathe-website.git
-   cd ecobreathe-website
+   git clone https://github.com/NicolasHaubricht/EcoBreathe-Web-Site.git
+   cd EcoBreathe-Web-Site
    ```
    
 2. Instale as dependências:
