@@ -9,6 +9,7 @@ import IoT from '../../assets/iot.png'
 const About = () => {
 
     const link_github_dash = 'https://github.com/NicolasHaubricht/EcoBreathe-Dashboard'
+    const link_github_iot = 'https://github.com/NicolasHaubricht/EcoBreathe-IoT'
     const link_github_web_site = 'https://github.com/NicolasHaubricht/EcoBreathe-Web-Site'
     const link_wokwi_simulacao = 'https://wokwi.com/projects/415723189766588417'
     
@@ -48,7 +49,7 @@ const About = () => {
                     {/* IoT */}
                     <div className='flex flex-col items-center gap-3'>
                         <h2 className='text-xl font-semibold'>Dispositivo IoT</h2>
-                        <Link to={link_github_dash} target='_blank' className='z-0 cursor-pointer'>
+                        <Link to={link_github_iot} target='_blank' className='z-0 cursor-pointer'>
                             <img className='md:h-64 w-auto rounded-2xl transition-all ease-in-out hover:shadow-2xl' src={IoT} alt="Simulação Wokwi" />
                         </Link>
                     </div>
