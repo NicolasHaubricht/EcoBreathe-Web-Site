@@ -10,7 +10,7 @@ const Home = (props) => {
                 <h2 className='uppercase font-bold text-2xl sm:text-3xl md:text-5xl text-center md:text-start text-green-2'> Ao meu projeto <strong className='font-bold text-green-2'>Ecobreathe</strong></h2>
                 <div className='flex flex-wrap gap-5 justify-around mt-10'>
                     <Link to='/dashboard'><ButtonHome text_btn={'Dashboard'} /></Link>
-                    <Link to='/about'><ButtonHome text_btn={'About Project '} /></Link>
+                    <Link to='/about'><ButtonHome text_btn={'Sobre o Projeto '} /></Link>
                 </div>
             </div>
         </section>
