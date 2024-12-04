@@ -53,5 +53,10 @@ Abaixo estão as principais dependências utilizadas neste projeto:
    ```bash
    http://localhost:5173
    ```
+   
+## 🌱 Outros Repositórios do Projeto EcoBreathe
+- Repositório IoT: <a href='https://github.com/NicolasHaubricht/EcoBreathe-IoT'>Link</a>
+- Repositório Dashboard: <a href='https://github.com/NicolasHaubricht/EcoBreathe-Dashboard'>Link</a>
+- Repositório Dados Simulados: <a href='https://github.com/NicolasHaubricht/EcoBreathe-Dados-Simulados'>Link</a>
 
 ### Desenvolvido por Nicolas Haubricht Hainfellner  
