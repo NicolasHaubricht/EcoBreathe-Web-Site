@@ -1,4 +1,4 @@
-# EcoBreathe Website 🌍
+# Projeto EcoBreathe | Website 🌍
 
 Este repositório contém o código fonte do website do projeto **EcoBreathe**, desenvolvido para visualizar e explorar dados ambientais, como temperatura, umidade, e particulas pm. O site foi criado com **React Vite** e **Tailwind** para desempenho otimizado e uma experiência fluida em qualquer dispositivo.
 
