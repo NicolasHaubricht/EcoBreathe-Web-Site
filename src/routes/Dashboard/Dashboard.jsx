@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-// Graphic Temperature
+// Grafico Temperatura
 const TemperatureChart = ({ data }) => {
     const displayedData = data.slice(-10); // Last 10 data points
     return (
@@ -9,7 +9,7 @@ const TemperatureChart = ({ data }) => {
             <LineChart data={displayedData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" />
-                <YAxis domain={[20, 40]} />
+                <YAxis domain={[0, 50]} />
                 <Tooltip />
                 <Legend />
                 <Line type="monotone" dataKey="temperature" stroke="#214001" name="Temperatura (°C)" />
@@ -18,7 +18,7 @@ const TemperatureChart = ({ data }) => {
     );
 };
 
-// Graphic Humidity
+// Grafico Umidade
 const HumidityChart = ({ data }) => {
     const displayedData = data.slice(-10); // Last 10 data points
     return (
@@ -35,7 +35,7 @@ const HumidityChart = ({ data }) => {
     );
 }
 
-// Graphic PM 2.5
+// Grafico PM 2.5
 const Pm25Chart = ({ data }) => {
     const displayedData = data.slice(-10); // Last 10 data points
     return (
@@ -52,7 +52,7 @@ const Pm25Chart = ({ data }) => {
     );
 }
 
-// Graphic PM 10
+// Grafico PM 10
 const Pm10Chart = ({ data }) => {
     const displayedData = data.slice(-10); // Last 10 data points 
     return (
@@ -71,16 +71,16 @@ const Pm10Chart = ({ data }) => {
 }
 
 
-// Render Graphics
+// Renderização dos Graficos
 const Dashboard = () => {
     const [selectedChart, setSelectedChart] = useState('temperature');
     const [data, setData] = useState([]);
 
     const chartOptions = [
-        { value: 'temperature', label: 'Temperature', component: TemperatureChart },
-        { value: 'humidity', label: 'Humidity', component: HumidityChart },
-        { value: 'pm2.5', label: 'Particles PM 2.5', component: Pm25Chart },
-        { value: 'pm10', label: 'Particles PM 10', component: Pm10Chart},
+        { value: 'temperature', label: 'Temperatura', component: TemperatureChart },
+        { value: 'humidity', label: 'Umidade', component: HumidityChart },
+        { value: 'pm2.5', label: 'Partículas PM 2.5', component: Pm25Chart },
+        { value: 'pm10', label: 'Partículas PM 10', component: Pm10Chart},
     ];
 
     
@@ -91,7 +91,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/weatherData');
+                const response = await fetch('https://ecobreathe-dados-simulados.vercel.app/weatherData');
                 const result = await response.json();
                 setData(result);
             } catch (error) {

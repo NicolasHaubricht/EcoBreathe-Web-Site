@@ -28,12 +28,12 @@ const ProSideBar = () => {
                         </Link>
                         <Link to='/about'>
                             <li className="p-3 hover:bg-green-1 rounded-md flex items-center cursor-pointer">
-                                <FaInfoCircle className="mr-2" /> About
+                                <FaInfoCircle className="mr-2" /> Sobre
                             </li>
                         </Link>
                         <Link to='/contact'>
                             <li className="p-3 hover:bg-green-1 rounded-md flex items-center cursor-pointer">
-                                <FaEnvelope className="mr-2" /> Contact
+                                <FaEnvelope className="mr-2" /> Contato
                             </li>
                         </Link>
                     </ul>
@@ -43,7 +43,7 @@ const ProSideBar = () => {
             onSetOpen={handleSidebarToggle}
         >
             <div
-                className="p-2 w-11 h-11 md:fixed md:h-dvh flex items-center justify-center bg-green-2 max-md:rounded-r-md z-0 text-white hover:w-16 transition-all ease-in-out"
+                className="p-2 w-11 h-11 md:fixed md:h-dvh flex items-center justify-center bg-green-2 max-md:rounded-r-md text-white hover:w-16 transition-all ease-in-out"
             >
                 <button onClick={() => handleSidebarToggle(!sidebarOpen)} className='md:hidden'>
                     <span className="material-symbols-outlined">

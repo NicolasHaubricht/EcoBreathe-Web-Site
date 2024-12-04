@@ -5,7 +5,7 @@ const Nav = () => {
         <>
             <nav className='absolute w-full h-[50px] bg-off-white'>
                 <ul className='w-full h-full flex justify-around items-center'>
-                    {/* Name Project */}
+                    {/* Nome do Projeto */}
                     <li>
                         <h1 className='uppercase font-bold text-green-1'>Ecobreathe</h1>
                     </li>
